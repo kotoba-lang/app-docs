@@ -1,0 +1,37 @@
+{
+  "name": "kotodama-r5ycqp6x",
+  "main": "svelte/.svelte-kit/cloudflare/_worker.js",
+  "compatibility_date": "2025-03-17",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_als"
+  ],
+  "assets": {
+    "directory": "./svelte/.svelte-kit/cloudflare/client",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "single-page-application"
+  },
+  "vars": {
+    "APP_ACTOR_HANDLE": "docs-performers",
+    "APP_CAPABILITIES": "[\"bpmn-dispatch\",\"oauth-redirect\"]",
+    "APP_DESCRIPTION": "Thin edge facade; Google Docs OAuth and sync run in BPMN + Zeebe Python",
+    "APP_DISPLAY_NAME": "Docs",
+    "APP_EMBED_URL": "https://r5ycqp6x.etzhayyim.com/?embed=1",
+    "APP_FRAMEWORK": "sveltekit-edge-bff",
+    "AGENTGATEWAY_MCP_ROUTER_URL": "https://mcp.etzhayyim.com/xrpc/com.etzhayyim.mcp.message",
+    "APP_NANOID": "r5ycqp6x",
+    "APP_PERFORMER_TYPE": "system",
+    "APP_UI_TYPE": "appview"
+  },
+  "routes": [
+    {
+      "pattern": "r5ycqp6x.etzhayyim.com/*",
+      "zone_name": "etzhayyim.com"
+    },
+    {
+      "pattern": "docs.etzhayyim.com/*",
+      "zone_name": "etzhayyim.com"
+    }
+  ]
+}

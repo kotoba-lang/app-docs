@@ -1,0 +1,20 @@
+;; Scoped babashka project for the lg-docs clj/bb port (ADR-2606280030,
+;; langgraph-python -> langgraph-clj). Independent of the repo-root bb.edn.
+;;
+;;   src   — lg-docs.* namespaces (port of lg/lg_docs/**)
+;;   tests — clojure.test ports of lg/tests/**
+;;
+;; langgraph-clj is pinned to the same sha as the repo-root bb.edn so the actor
+;; StateGraph idiom is identical to kaname/yobel. cheshire + babashka.http-client
+;; are bb built-ins.
+{:paths ["src" "tests"]
+ :deps {com-junkawasaki/langgraph-clj
+        {:git/url "https://github.com/com-junkawasaki/langgraph-clj"
+         :git/sha "c7daa07d4e50f55d7e2a02e4b89dbeb2b200961d"}
+        com-junkawasaki/langchain-clj
+        {:git/url "https://github.com/com-junkawasaki/langchain-clj"
+         :git/sha "2b03859c3ee722b64f3eddd0b615a54019b17c81"}}
+ :tasks
+ {test
+  {:doc "Run the lg-docs clojure.test suite (port parity with lg/tests/**)."
+   :task (load-file "run_tests.clj")}}}

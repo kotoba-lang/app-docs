@@ -1,0 +1,42 @@
+{
+  "@context": "https://etzhayyim.com/ns/kotodama/v1",
+  "@id": "did:web:docs.etzhayyim.com",
+  "name": "docs-performers",
+  "nanoid": "r5ycqp6x",
+  "performerType": "system",
+  "runtimeType": "worker",
+  "project": "docs",
+  "component": {
+    "path": "src/app.ts"
+  },
+  "build": {
+    "guestLanguage": "ts",
+    "role": "thin-edge"
+  },
+  "profile": {
+    "displayName": "Docs",
+    "description": "Thin edge facade; Google Docs OAuth and sync run in AgentGateway MCP + pod-side LangServer",
+    "isBot": true,
+    "agentType": "autonomous",
+    "category": "google-workspace",
+    "operator": "etzhayyim.co.jp",
+    "capabilities": ["bpmn-dispatch", "oauth-redirect"]
+  },
+  "routes": [
+    {
+      "host": "docs.etzhayyim.com",
+      "paths": ["/"],
+      "tls": true
+    }
+  ],
+  "triggers": {
+    "subscribeRepos": {
+      "collections": [
+        "com.etzhayyim.apps.docs.docsEntity",
+        "com.etzhayyim.apps.docs.docsEvent",
+        "com.etzhayyim.apps.docs.docsReport"
+      ]
+    }
+  },
+  "uiType": "appview"
+}
