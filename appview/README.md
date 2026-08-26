@@ -22,4 +22,5 @@
 - ルーティング:
   - `/api/...` -> `docs-performers-r5ycqp6x`
   - `/mcp/...` -> `docs-mcp-component`
-  - `/...` -> `fileserver` (`svelte/build/`)
+  - `/...` -> `fileserver` (`docs-performers-r5ycqp6x/cljs/public/`、reagent + re-frame + jp-go-dds。
+    旧 Svelte フロントエンドは 2026-08-26 に移行済み)
