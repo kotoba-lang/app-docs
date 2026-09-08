@@ -10,7 +10,7 @@
 
   Both speak the same EDN tx-op vocabulary (`[:db/add ..]` / `[:db/retract ..]` /
   `[:db.fn/retractEntity ..]`). Attr maps are keyed by the BARE attribute string."
-  (:require [lg-docs.ids :as ids]
+  (:require [kotoba.lang.text] [lg-docs.ids :as ids]
             [lg-docs.edn :as edn]
             [lg-docs.kotoba-datomic :as kd]))
 
@@ -22,7 +22,7 @@
 
 (defn- bare [a]
   (let [s (if (keyword? a) (subs (str a) 1) (str a))]
-    (if (clojure.string/starts-with? s ":") (subs s 1) s)))
+    (if (kotoba.lang.text/starts-with? s ":") (subs s 1) s)))
 
 ;; ── kotoba datomic implementation ─────────────────────────────────────────────
 

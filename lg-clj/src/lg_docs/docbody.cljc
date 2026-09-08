@@ -11,7 +11,7 @@
   `apply-request` returns an UPDATED body (the Python version mutated in place);
   the caller reduces over the request list. Cross-element `deleteRange` merges the
   partial start/end elements (start element's kind wins)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [lg-docs.ids :as ids]))
 
 (defn doc-length

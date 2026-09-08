@@ -5,7 +5,7 @@
   Order is a fractional-index string (insert-friendly), byte-for-byte matching the
   reference gitoffice.cljc + the kotoba CLJS port. The elementId IS the stable
   block id, so re-normalizing is idempotent (parity asserted in tests)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [lg-docs.edn :as edn]))
 
 ;; --- fractional indexing (base-36 fractions, lexicographic order) -----------
