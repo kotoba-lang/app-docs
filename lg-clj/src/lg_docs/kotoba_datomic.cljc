@@ -8,7 +8,7 @@
 
   Read-only `q`/`pull` carry no server key by default (no-server-key, read-only,
   ADR-2606072802); a write `transact` needs the operator/member bearer."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [lg-docs.edn :as edn]
             #?(:clj [cheshire.core :as json]))
   #?(:clj (:import [java.security MessageDigest])))

@@ -7,7 +7,7 @@
   content (flattened plaintext). The `revisionId` (writeControl/ETag) guards
   batchUpdate concurrency. Synchronous (the Python handlers were async only
   because the store was async over httpx)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [lg-docs.docbody :as docbody]
             [lg-docs.ids :as ids]
             [lg-docs.mapping :as mapping]

@@ -6,14 +6,14 @@
   ops. In Clojure, keywords/symbols/strings/numbers ARE EDN, so `pr-str` is the
   encoder; we only add the tx-op builders + a tolerant scalar decoder for the
   server's `v_edn` reply strings."
-  (:require [clojure.edn :as edn]))
+  (:require [kotoba.lang.text] [clojure.edn :as edn]))
 
 (defn ->kw
   "\"doc/type\" -> :doc/type ; passes a keyword through unchanged."
   [a]
   (cond
     (keyword? a) a
-    (and (string? a) (clojure.string/starts-with? a ":")) (keyword (subs a 1))
+    (and (string? a) (kotoba.lang.text/starts-with? a ":")) (keyword (subs a 1))
     :else (keyword a)))
 
 (defn encode

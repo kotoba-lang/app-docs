@@ -15,7 +15,7 @@
   NOTE (coexist): the DEPLOYED appview is still the FastAPI pod (lg_docs/server.py).
   This clj dispatcher is the verified port; wiring an actual socket server under bb
   (org.httpkit.server) is deferred so the live pod is never disturbed."
-  (:require [lg-docs.handlers :as handlers]
+  (:require [kotoba.lang.text] [lg-docs.handlers :as handlers]
             [lg-docs.kotoba-datomic :as kd]
             [lg-docs.store :as store]))
 
@@ -40,7 +40,7 @@
 (defn handle-request
   "Pure dispatcher. req = {:method :path :headers :query :body}. -> {:status :body}."
   [st {:keys [method path headers query body]}]
-  (let [method (keyword (clojure.string/lower-case (name method)))]
+  (let [method (keyword (kotoba.lang.text/lower (name method)))]
     (cond
       (and (= :get method) (#{"/health" "/ok"} path))
       {:status 200 :body {:ok true :app "lg-docs" :ts (now-ms)}}
