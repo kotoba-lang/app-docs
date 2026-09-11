@@ -1,0 +1,23 @@
+{:format :kotoba.cljk-origin/v1
+ :renamed-on "2026-09-11"
+ :decision "adr-2609111500-cljk-rename-all-clojure-source (com-junkawasaki/root 90-docs/adr; owner instruction 2026-09-11)"
+ :rule "value = the extension the file had before the rename. A path ending in .clj.cljk or .cljs.cljk kept it in the name because both platform files existed (or the plain target was taken)."
+ :origins
+ {"appview/docs-performers-r5ycqp6x/cljs/scripts/gen-page.cljk" ".cljs"
+  "appview/docs-performers-r5ycqp6x/cljs/src/docs_performers/app.cljk" ".cljs"
+  "appview/docs-performers-r5ycqp6x/cljs/test/docs_performers/app_test.cljk" ".cljs"
+  "lg-clj/run_tests.cljk" ".clj"
+  "lg-clj/src/lg_docs/docbody.cljk" ".cljc"
+  "lg-clj/src/lg_docs/edn.cljk" ".cljc"
+  "lg-clj/src/lg_docs/gitoffice_normalize.cljk" ".cljc"
+  "lg-clj/src/lg_docs/graph.cljk" ".cljc"
+  "lg-clj/src/lg_docs/handlers.cljk" ".cljc"
+  "lg-clj/src/lg_docs/ids.cljk" ".cljc"
+  "lg-clj/src/lg_docs/kotoba_datomic.cljk" ".cljc"
+  "lg-clj/src/lg_docs/mapping.cljk" ".cljc"
+  "lg-clj/src/lg_docs/server.cljk" ".cljc"
+  "lg-clj/src/lg_docs/store.cljk" ".cljc"
+  "lg-clj/tests/lg_docs/gitoffice_normalize_test.cljk" ".cljc"
+  "lg-clj/tests/lg_docs/graph_test.cljk" ".cljc"
+  "lg-clj/tests/lg_docs/handlers_test.cljk" ".cljc"
+  "lg-clj/tests/lg_docs/server_test.cljk" ".cljc"}}
