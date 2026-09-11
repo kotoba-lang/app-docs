@@ -58,6 +58,6 @@ founder directive "twin の py を削除", 2026-06-28); `lg-clj/` is now the can
 
 ## Test
 ```bash
-cd 60-apps/etzhayyim-project-docs/lg-clj && bb run_tests.clj
+cd 60-apps/etzhayyim-project-docs/lg-clj && kbb run_tests.cljk
 cd 50-infra/cloudflare/workers/docs-compat && node --test test/*.test.ts
 ```
