@@ -1,5 +1,5 @@
 ;; lg-docs clj/bb test runner (repo rule: run_tests.clj, NOT .sh).
-;; Run from the app dir:  bb run_tests.clj   (or: bb test)
+;; Run from the app dir:  kbb run_tests.cljk   (or: bb test)
 (require '[clojure.test :as t]
          'lg-docs.handlers-test
          'lg-docs.gitoffice-normalize-test

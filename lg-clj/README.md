@@ -11,7 +11,7 @@ This clj/bb tree is now the **canonical** lg-docs code. The DEV-stage Python app
 2026-06-28): every `.py` had a verified `.cljc` twin (table below), nothing outside the
 app imported `lg_docs`, and the app carried no cron (no `crons` in `langgraph.json`, no
 `cron.py`/APScheduler — the Dockerfile only ran `uvicorn lg_docs.server:app`). The twin
-suite stays green after the deletion (`bb run_tests.clj` → 23 tests / 54 assertions).
+suite stays green after the deletion (`kbb run_tests.cljk` → 23 tests / 54 assertions).
 
 The Python→clj parity that justified the deletion:
 
@@ -34,7 +34,7 @@ The Python→clj parity that justified the deletion:
 
 ```bash
 cd 60-apps/etzhayyim-project-docs/lg-clj
-bb run_tests.clj      # or: bb test   →  23 tests / 54 assertions, 0 failures
+kbb run_tests.cljk      # or: bb test   →  23 tests / 54 assertions, 0 failures
 ```
 
 ## Deviations (honest)
