@@ -8,7 +8,7 @@
 
   Read-only `q`/`pull` carry no server key by default (no-server-key, read-only,
   ADR-2606072802); a write `transact` needs the operator/member bearer."
-  (:require [kotoba.lang.text :as str]
+  (:require [kotoba.bytes :as kbytes] [kotoba.lang.text :as str]
             [lg-docs.edn :as edn]
             #?(:clj [cheshire.core :as json]))
   #?(:clj (:import [java.security MessageDigest])))
@@ -55,7 +55,7 @@
   [label]
   (if (and (str/starts-with? label "b") (re-matches #"b[a-z2-7]{58,80}" label))
     label
-    #?(:clj (kotoba-cid (.getBytes ^String label "UTF-8")) :cljs label)))
+    #?(:clj (kotoba-cid (kbytes/utf8-bytes ^String label)) :cljs label)))
 
 (defn- headers []
   (if (seq (:bearer *config*))
